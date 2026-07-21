@@ -1,0 +1,47 @@
+{
+    "name": "HPCC Systems platform",
+    "build": {
+        "dockerfile": "Dockerfile",
+        "context": ".."
+    },
+    "remoteUser": "vscode",
+    "features": {},
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "hpcc-systems.ecl",
+                "gordonsmith.observable-js"
+            ],
+            "settings": {
+                "ecl.eclccPath": "/opt/HPCCSystems/bin/eclcc"
+            }
+        }
+    },
+    "portsAttributes": {
+        "8010": {
+            "label": "ECL Watch - localhost",
+            "onAutoForward": "openBrowser"
+        },
+        "18010": {
+            "label": "ECL Watch",
+            "onAutoForward": "openBrowser"
+        },
+        "8002": {
+            "label": "ESP (internal) - localhost",
+            "onAutoForward": "silent"
+        },
+        "18002": {
+            "label": "ESP (internal)",
+            "onAutoForward": "silent"
+        }
+    },
+    "forwardPorts": [
+        8010,
+        18010,
+        8002,
+        18002
+    ],
+    "postCreateCommand": "echo 'Devcontainer created'",
+    "postStartCommand": "/usr/local/bin/start-hpcc.sh && /usr/local/bin/install-bundles.sh",
+    "shutdownAction": "stopContainer"
+}
