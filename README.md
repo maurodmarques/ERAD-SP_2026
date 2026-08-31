@@ -14,7 +14,7 @@ Environment for the HPCC-Systems big data platform.  This demo uses cloud develo
 
 Click the badge below to launch a Codespace using the new dev container configuration.
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/mauromarx/ERAD-SP_2026)
+[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/maurodmarques/ERAD-SP_2026)
 
 The Codespaces environment will:
 
